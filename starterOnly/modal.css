@@ -478,6 +478,24 @@ footer {
   padding-right: 2vw;
   margin: 0 20px;
 }
+div#confirmation {
+  height: 600px;
+  flex-direction: column;
+}
+
+div#confirmation span {
+  flex: 1;
+  text-align: center;
+  display: grid;
+  align-content: center;
+  display: grid;
+}
+
+div#confirmation input {
+  flex: 0;
+  width: 220px;
+  text-align: center;
+}
 @media screen and (max-width: 800px) {
   .hero-section {
     display: block;
