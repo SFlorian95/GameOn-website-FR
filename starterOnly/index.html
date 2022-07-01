@@ -54,16 +54,18 @@
 
       <div class="bground">
         <div class="content">
-          <span class="close"></span>
+          <span class="close close-modal"></span>
           <div class="modal-body">
             <form
+              id="form-signup"
               name="reserve"
               action="index.html"
               method="get"
-              onsubmit="return validate();"
             >
               <div
-                class="formData">
+                class="formData"
+                data-error="Veuillez entrer 2 caractères ou plus"
+                >
                 <label>Prénom</label><br>
                 <input
                   class="text-control"
@@ -74,7 +76,9 @@
                 /><br>
               </div>
               <div
-                class="formData">
+                class="formData"
+                data-error="Veuillez entrer 2 caractères ou plus"
+                >
                 <label>Nom</label><br>
                 <input
                   class="text-control"
@@ -84,7 +88,9 @@
                 /><br>
               </div>
               <div
-                class="formData">
+                class="formData"
+                data-error="Veuillez entrer un email valide"
+                >
                 <label>E-mail</label><br>
                 <input
                   class="text-control"
@@ -94,7 +100,8 @@
                 /><br>
               </div>
               <div
-                class="formData">
+                class="formData"
+                data-error="Vous devez entrer votre date de naissance">
                 <label>Date de naissance</label><br>
                 <input
                   class="text-control"
@@ -104,15 +111,17 @@
                 /><br>
               </div>
               <div
-                class="formData">
+                class="formData"
+                data-error="Vous devez entrer un nombre">
                 <label>À combien de tournois GameOn avez-vous déjà participé ?</label><br>
                 <input type="number" class="text-control" id="quantity" name="quantity" min="0" max="99">
               </div>
               <p class="text-label">A quel tournoi souhaitez-vous participer cette année ?</p>
               <div
-                class="formData">
+                class="formData"
+                data-error="Vous devez choisir une option.">
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input tournament"
                   type="radio"
                   id="location1"
                   name="location"
@@ -123,7 +132,7 @@
                   New York</label
                 >
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input tournament"
                   type="radio"
                   id="location2"
                   name="location"
@@ -134,7 +143,7 @@
                   San Francisco</label
                 >
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input tournament"
                   type="radio"
                   id="location3"
                   name="location"
@@ -145,7 +154,7 @@
                   Seattle</label
                 >
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input tournament"
                   type="radio"
                   id="location4"
                   name="location"
@@ -156,7 +165,7 @@
                   Chicago</label
                 >
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input tournament"
                   type="radio"
                   id="location5"
                   name="location"
@@ -167,7 +176,7 @@
                   Boston</label
                 >
                 <input
-                  class="checkbox-input"
+                  class="checkbox-input tournament"
                   type="radio"
                   id="location6"
                   name="location"
@@ -206,6 +215,10 @@
                 value="C'est parti"
               />
             </form>
+            <div id="confirmation">
+              <span>Merci ! Votre réservation a été reçue.</span>
+              <input class="btn-submit close-modal" type="submit" value="Fermer" />
+          </div>
           </div>
         </div>
       </div>
