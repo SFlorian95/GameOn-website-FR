@@ -69,24 +69,44 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .topnav a {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
+  .topnav a {
+      display: none;
   }
-}
-
-@media screen and (max-width: 768px) {
-  .topnav.responsive {position: relative;}
+  .topnav a.icon {
+      float: right;
+      display: block;
+  }
+  .topnav,
+  .topnav.responsive {
+      position: fixed;
+      height: 51px;
+      width: 100%;
+      z-index: 10;
+      background: white;
+      margin: unset;
+      margin-left: 3.5%;
+  }
+  .topnav img {
+      height: auto;
+  }
+  .topnav .main-navbar,
+  .topnav.responsive .main-navbar {
+      z-index: -1;
+      position: fixed;
+      width: 200px;
+      background: white;
+      border-radius: 20px;
+      right: 0;
+  }
   .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
   }
   .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
+      float: none;
+      display: block;
+      text-align: left;
   }
 }
 
@@ -532,6 +552,63 @@ div#confirmation input {
   .copyrights {
     margin-top: 50px;
     text-align: center;
+  }
+}
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .main-navbar a {
+      font-size: 14px;
+  }
+  .hero-section {
+      display: block;
+      box-shadow: unset;
+  }
+  .hero-content {
+      background: #fff;
+      color: #000;
+      padding: 20px;
+  }
+  .hero-content::after {
+      content: unset;
+  }
+  .hero-content .btn-signup {
+      display: none;
+  }
+  .hero-headline {
+      font-size: 4.5rem;
+      white-space: normal;
+  }
+  .hero-text {
+      width: unset;
+      font-size: 1.5rem;
+  }
+  /* .hero-img img {
+      border-radius: 10px;
+      margin-top: 40px;
+  } */
+  .hero-section>.btn-signup {
+      display: block;
+      margin: 32px auto 10px;
+      padding: 12px 35px;
+  }
+  .copyrights {
+      margin-top: 50px;
+      text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-headline {
+      font-size: 40px;
+  }
+  .hero-text {
+      font-size: 15px;
+  }
+  main {
+      margin: 51px 20px 15px;
   }
 }
 
